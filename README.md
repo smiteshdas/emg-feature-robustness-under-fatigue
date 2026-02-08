@@ -1,4 +1,4 @@
-# Robustness Analysis of sEMG Features for Gesture Classification Under Muscle Fatigue
+# Robustness Analysis of sEMG Features for Upper-Limb Dynamic Movement Classification Under Muscle Fatigue
 
 Surface electromyography (sEMG) based gesture recognition systems are typically trained under non-fatigued conditions, whereas real-world usage inevitably involves muscle fatigue. Fatigue alters muscle conduction velocity and spectral characteristics of EMG signals, potentially degrading model performance.
 
