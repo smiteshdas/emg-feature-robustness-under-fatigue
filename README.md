@@ -109,6 +109,21 @@ Feature robustness is critical when designing EMG-based gesture recognition syst
 - Analysis by taking Feature Set (training/testing with set of multiple feature types)
 - Dedicated fatigue vs non-fatigue classification   
 
+## Abbreviations
+
+
+* **RMS** – Root Mean Square
+* **MAV** – Mean Absolute Value
+* **VAR** – Variance
+* **IEMG** – Integrated Electromyogram
+* **WL** – Waveform Length
+* **ZC** – Zero Crossings
+* **SSC** – Slope Sign Changes
+* **MPF** – Mean Power Frequency
+* **MF** – Median Frequency
+* **Spectral Entropy** – Spectral Entropy (measure of signal power distribution randomness in the frequency domain)
+
+
 ## References
 
 - Cerqueira, S.M.; Vilas Boas, R.; Figueiredo, J.; Santos, C.P. A Comprehensive Dataset of Surface Electromyography and Self-Perceived Fatigue Levels for Muscle Fatigue Analysis. Sensors 2024, 24, 8081. https://doi.org/10.3390/s24248081
