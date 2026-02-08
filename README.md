@@ -39,6 +39,12 @@ Extracted features:
 
 I built a comphrehensive CSV file with all features calculated (Window- 250ms, Overlap- 50%) from the raw paper dataset for conducting this study smoothly.
 
+### Files
+
+*./code/CSV_build.ipynb* - Builds a consolidated CSV file with raw data processed. All feature types are calculated with Window size of 250ms and Overlap of 50%.
+
+*./code/ablation-study-and-analysis.ipynb* - Does the ablation study and analysis
+
 ## Methodology
 
 - Classifier: SVM with RBF kernel  
@@ -46,7 +52,7 @@ I built a comphrehensive CSV file with all features calculated (Window- 250ms, O
 - Testing:
   - On separate Non-fatigued data which was not used for training (baseline)
   - Fatigued data (robustness evaluation)
-  - 
+    
 Feature ablation (using individual features to train,test and evaluate the model) was performed at the feature-type level (selected features included across all muscles).
 
 Evaluation metrics:
