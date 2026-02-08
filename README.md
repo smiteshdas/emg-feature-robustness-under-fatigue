@@ -1,4 +1,4 @@
-# EMG Feature Robustness Under Fatigue
+# Robustness Analysis of sEMG Features for Gesture Classification Under Muscle Fatigue
 
 Surface electromyography (sEMG) based gesture recognition systems are typically trained under non-fatigued conditions, whereas real-world usage inevitably involves muscle fatigue. Fatigue alters muscle conduction velocity and spectral characteristics of EMG signals, potentially degrading model performance.
 
@@ -37,8 +37,6 @@ Extracted features:
 **Time-domain:** MAV, RMS, IEMG, VAR, WL, ZC, SSC  
 **Frequency-domain:** MF, MPF, Spectral Entropy  
 
-Feature ablation (using individual features to train,test and evaluate the model) was performed at the feature-type level (selected features included across all muscles).
-
 I built a comphrehensive CSV file with all features calculated (Window- 250ms, Overlap- 50%) from the raw paper dataset for conducting this study smoothly.
 
 ## Methodology
@@ -48,6 +46,8 @@ I built a comphrehensive CSV file with all features calculated (Window- 250ms, O
 - Testing:
   - On separate Non-fatigued data which was not used for training (baseline)
   - Fatigued data (robustness evaluation)
+  - 
+Feature ablation (using individual features to train,test and evaluate the model) was performed at the feature-type level (selected features included across all muscles).
 
 Evaluation metrics:
 - Accuracy  
@@ -92,7 +92,6 @@ Muscle fatigue slows down muscle fiber conduction and shifts the EMG signal’s 
 
 On the other hand, amplitude-based features such as MAV, RMS, IEMG, VAR, and WL mainly measure signal strength rather than frequency content. This makes them more stable and robust for gesture classification when fatigue is present.
 
-An important takeaway is that features that are highly sensitive to fatigue are not always the best for fatigue-robust gesture recognition. The best feature choice depends on the specific task.
 
 ## Conclusion
 
@@ -100,17 +99,18 @@ Feature robustness is critical when designing EMG-based gesture recognition syst
 
 
 ## Future Work
+- Study on the shift in feature values as fatigue progresses
 - Dedicated fatigue vs non-fatigue classification   
 
 ## References
 
 - Cerqueira, S.M.; Vilas Boas, R.; Figueiredo, J.; Santos, C.P. A Comprehensive Dataset of Surface Electromyography and Self-Perceived Fatigue Levels for Muscle Fatigue Analysis. Sensors 2024, 24, 8081. https://doi.org/10.3390/s24248081
-- B. Hudgins, P. Parker and R. N. Scott, "A new strategy for multifunction myoelectric control," in IEEE Transactions on Biomedical Engineering, vol. 40, no. 1, pp. 82-94, Jan. 1993, doi: 10.1109/10.204774.
-keywords: {Prosthetics;Muscles;Feature extraction;Artificial neural networks},
-- González-Izal M, Malanda A, Navarro-Amézqueta I, Gorostiaga EM, Mallor F, Ibañez J, Izquierdo M. EMG spectral indices and muscle power fatigue during dynamic contractions. J Electromyogr Kinesiol. 2010 Apr;20(2):233-40. doi: 10.1016/j.jelekin.2009.03.011. Epub 2009 Apr 29. PMID: 19406664.
-- Viitasalo JH, Komi PV. Signal characteristics of EMG during fatigue. Eur J Appl Physiol Occup Physiol. 1977 Sep 16;37(2):111-21. doi: 10.1007/BF00421697. PMID: 902652.
-- Krogh-Lund C, Jørgensen K. Changes in conduction velocity, median frequency, and root mean square-amplitude of the electromyogram during 25% maximal voluntary contraction of the triceps brachii muscle, to limit of endurance. Eur J Appl Physiol Occup Physiol. 1991;63(1):60-9. doi: 10.1007/BF00760803. PMID: 1915335.
+- Zhang, L. (2024). EMG-Toolbox Python Package (1.0.1). Zenodo. https://doi.org/10.5281/zenodo.13957415
+- B. Hudgins, P. Parker and R. N. Scott, "A new strategy for multifunction myoelectric control," in IEEE Transactions on Biomedical Engineering, vol. 40, no. 1, pp. 82-94, Jan. 1993, doi: 10.1109/10.204774. https://ieeexplore.ieee.org/document/204774
+- González-Izal M, Malanda A, Navarro-Amézqueta I, Gorostiaga EM, Mallor F, Ibañez J, Izquierdo M. EMG spectral indices and muscle power fatigue during dynamic contractions. J Electromyogr Kinesiol. 2010 Apr;20(2):233-40. doi: 10.1016/j.jelekin.2009.03.011. Epub 2009 Apr 29. PMID: 19406664. https://pubmed.ncbi.nlm.nih.gov/19406664/
+- Viitasalo JH, Komi PV. Signal characteristics of EMG during fatigue. Eur J Appl Physiol Occup Physiol. 1977 Sep 16;37(2):111-21. doi: 10.1007/BF00421697. PMID: 902652. https://pubmed.ncbi.nlm.nih.gov/902652/
+- Krogh-Lund C, Jørgensen K. Changes in conduction velocity, median frequency, and root mean square-amplitude of the electromyogram during 25% maximal voluntary contraction of the triceps brachii muscle, to limit of endurance. Eur J Appl Physiol Occup Physiol. 1991;63(1):60-9. doi: 10.1007/BF00760803. PMID: 1915335. https://pubmed.ncbi.nlm.nih.gov/1915335/
 
 ## Tools
 
-Python, NumPy, Pandas, Scikit-learn, Matplotlib
+[Python](https://www.python.org/), [NumPy](https://numpy.org/), [Pandas](https://pandas.pydata.org/), [Scikit-learn](https://scikit-learn.org/), [Matplotlib](https://matplotlib.org/) , [emg-toolbox](https://doi.org/10.5281/zenodo.13957415)
