@@ -106,6 +106,7 @@ Feature robustness is critical when designing EMG-based gesture recognition syst
 
 ## Future Work
 - Study on the shift in feature values as fatigue progresses
+- Analysis by taking Feature Set (training/testing with set of multiple feature types)
 - Dedicated fatigue vs non-fatigue classification   
 
 ## References
